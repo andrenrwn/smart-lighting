@@ -19,9 +19,9 @@ What I ended up choosing:
 
 # considerations
 
-## New renovation
+# New renovation
 
-### Smart Downlights
+# Smart Downlights
 In a newly renovated home, you have full freedom to add or change a false ceiling, then add or change the lighting fixtures.  This frees us up from being locked in to specific fixtures and screw types, allowing us to choose any fixture we like.  Gypsum board for false ceilings are also more flexible than I thought they could be.  Holes for fixtures and downlights can be covered back with gypsum and painted over as if they were never there.
 
 If you ever have to deal with choosing lighting mechanism, you know it can get crazy because there are so many plug and screw standards and a multitude of fixtures based on decades of history.
@@ -34,7 +34,7 @@ https://www.harolux.com/how-to-use-4-pin-led-bulb/
 Vendor lock-in is a beast and we all should fight it as consumers.  One of the ways to do that is to look at what contract manufacturers are manufacturing to see if there are any commonly used and popular products that absolutely avoids unecessary unique standards.
 
 
-### LED Strips
+# LED Strips
 SK6812 RGBW.
 5 or 12V.
 
@@ -47,6 +47,13 @@ The nice thing about SK6812 and WS2811/2812/2814/2815 LED strips are that they a
 # WLED
 If your lighting device is not using Zigbee, then the other option is WLED through Ethernet or Wi-Fi.
 
+There are several different options to get WLED controllers to control LED strips and LED matrices.
+
+## QinLED
+[QinLED](https://quinled.info/quinled-dig-octa/) makes components that you can use to build WLED controllers based on ESP32.  It makes it easy for you to reprogram and custom-build to your home's lighting specifications.  The controllers are flexible and has safety fuses, something that is *very* useful when renovating a new home, because low-skilled workers (who are usually the only option we get unless you're a multi-millionaire) will absolutely destroy your LED controllers when building your house for you.  Our electrical workers burned through dozens of these fuses connecting things in the wrong polarity and having badly manufactured LED sheets run solders on the edges causing them to short-circuit.  Fuses are your friend.  Always have them around.
+
+## Gledopto
+[Gledopto](https://www.gledopto.com/h-col-420.html) makes ready-built WLED controllers.  These are compact and integrated, but do not have fuses.  If you need to reflash physically, get the model with UART.  My installation of LED sheets burned through at least two Gledopto RGBCCT PWM controllers before I used QinLED to test them first.
 
 # Wiring
 To power modern smart lighting, the most flexible cable arrangement is at least one live and one neutral wire. A grounding wire is excellent to have.
